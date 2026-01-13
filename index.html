@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وظفني - المنصة الذكية للتوظيف العراقي</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <i class="fas fa-handshake"></i>
+                    <div>
+                        <h1>وظفني</h1>
+                        <p>المنصة الذكية للتوظيف العراقي</p>
+                    </div>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="index.html" class="active"><i class="fas fa-home"></i> الرئيسية</a>
+                    <a href="companies.html"><i class="fas fa-building"></i> الشركات</a>
+                    <a href="candidates.html" class="disabled"><i class="fas fa-users"></i> المرشحين</a>
+                    <a href="jobs.html" class="disabled"><i class="fas fa-briefcase"></i> الوظائف</a>
+                </div>
+                
+                <div class="auth-buttons">
+                    <button class="btn btn-outline" onclick="showRegisterModal('candidate')">
+                        <i class="fas fa-user"></i> تسجيل كمرشح
+                    </button>
+                    <button class="btn btn-primary" onclick="showRegisterModal('company')">
+                        <i class="fas fa-building"></i> تسجيل كشركة
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">نوصل <span class="highlight">الموهبة</span> بالفرصة <span class="highlight">المناسبة</span></h2>
+                <p class="hero-text">أول منصة توظيف ذكية في العراق تجمع بين أفضل المواهب والشركات الرائدة</p>
+                
+                <div class="search-box">
+                    <input type="text" placeholder="ابحث عن وظيفة، مرشح، أو شركة...">
+                    <select>
+                        <option>كل الفئات</option>
+                        <option>الوظائف</option>
+                        <option>المرشحين</option>
+                        <option>الشركات</option>
+                    </select>
+                    <button class="btn btn-primary"><i class="fas fa-search"></i> بحث</button>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>1,250+</h3>
+                        <p>وظيفة شاغرة</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>3,800+</h3>
+                        <p>مرشح مسجل</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>180+</h3>
+                        <p>شركة موثقة</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>92%</h3>
+                        <p>رضا العملاء</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">لماذا تختار منصتنا؟</h2>
+            <p class="section-subtitle">نوفر لك كل ما تحتاجه للنجاح في سوق العمل العراقي</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>بحث ذكي متقدم</h3>
+                    <p>نظام بحث يعتمد على الذكاء الاصطناعي لمطابقة المهارات مع الوظائف بدقة عالية</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>توثيق وشفافية</h3>
+                    <p>كل الشركات موثقة رسمياً مع تقييمات حقيقية من الموظفين السابقين</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>تطوير مستمر</h3>
+                    <p>دورات تدريبية مجانية ومدفوعة لتطوير مهاراتك الوظيفية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="companies">
+        <div class="container">
+            <h2 class="section-title">شركات رائدة تثق بنا</h2>
+            <p class="section-subtitle">تعاونوا مع أفضل الشركات العراقية</p>
+            
+            <div class="companies-grid" id="featuredCompanies">
+                <!-- سيتم تعبئته بـ JavaScript -->
+            </div>
+            
+            <div class="text-center">
+                <a href="companies.html" class="btn btn-primary">
+                    <i class="fas fa-building"></i> عرض كل الشركات
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3><i class="fas fa-handshake"></i> وظفني</h3>
+                    <p>نوصل الموهبة العراقية بالفرص المناسبة منذ 2024</p>
+                </div>
+                
+                <div>
+                    <h4>روابط سريعة</h4>
+                    <a href="index.html">الرئيسية</a>
+                    <a href="companies.html">الشركات</a>
+                    <a href="jobs.html" class="disabled">الوظائف</a>
+                    <a href="candidates.html" class="disabled">المرشحين</a>
+                </div>
+                
+                <div>
+                    <h4>تواصل معنا</h4>
+                    <p><i class="fas fa-phone"></i> 0770 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@wathafni.iq</p>
+                    <p><i class="fas fa-map-marker-alt"></i> بغداد، العراق</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2024 وظفني - المنصة الذكية للتوظيف العراقي</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle">انضم إلينا</h3>
+            
+            <div class="modal-tabs">
+                <button class="tab-btn active" onclick="switchTab('candidate')">
+                    <i class="fas fa-user"></i> باحث عن عمل
+                </button>
+                <button class="tab-btn" onclick="switchTab('company')">
+                    <i class="fas fa-building"></i> مسؤول توظيف
+                </button>
+            </div>
+            
+            <div id="candidateForm" class="form">
+                <input type="text" id="candidateName" placeholder="الاسم الكامل">
+                <input type="email" id="candidateEmail" placeholder="البريد الإلكتروني">
+                <input type="password" id="candidatePassword" placeholder="كلمة المرور">
+                <input type="tel" id="candidatePhone" placeholder="رقم الهاتف">
+                <button class="btn btn-primary" onclick="registerUser('candidate')">
+                    <i class="fas fa-user-plus"></i> إنشاء حساب
+                </button>
+            </div>
+            
+            <div id="companyForm" class="form" style="display: none;">
+                <input type="text" id="companyName" placeholder="اسم الشركة">
+                <input type="email" id="companyEmail" placeholder="البريد المؤسسي">
+                <input type="password" id="companyPassword" placeholder="كلمة مرور الشركة">
+                <input type="tel" id="companyPhone" placeholder="هاتف الشركة">
+                <select id="companyIndustry">
+                    <option>اختر مجال العمل</option>
+                    <option>تقنية المعلومات</option>
+                    <option>المالية والمصرفية</option>
+                    <option>الصحة والطب</option>
+                    <option>النفط والغاز</option>
+                </select>
+                <button class="btn btn-primary" onclick="registerUser('company')">
+                    <i class="fas fa-building"></i> طلب حساب
+                </button>
+            </div>
+            
+            <button class="btn btn-text" onclick="closeModal()">إلغاء</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+        // عرض شركات مميزة في الصفحة الرئيسية
+        function loadFeaturedCompanies() {
+            const container = document.getElementById('featuredCompanies');
+            if (!container) return;
+            
+            const companies = JSON.parse(localStorage.getItem('wathafni_companies')) || [];
+            const featured = companies.slice(0, 4);
+            
+            container.innerHTML = '';
+            
+            featured.forEach(company => {
+                const card = `
+                    <div class="company-card">
+                        <div class="company-logo">
+                            <i class="${company.logo || 'fas fa-building'}"></i>
+                        </div>
+                        <h3>${company.name}</h3>
+                        <p>${company.industry}</p>
+                        <div class="rating">
+                            ${'★'.repeat(Math.floor(company.rating))}${'☆'.repeat(5 - Math.floor(company.rating))} ${company.rating.toFixed(1)}
+                        </div>
+                        <p class="jobs">${company.jobs || 0} وظيفة شاغرة</p>
+                    </div>
+                `;
+                container.innerHTML += card;
+            });
+        }
+        
+        // تحميل البيانات عند فتح الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFeaturedCompanies();
+        });
+    </script>
+</body>
+</html>
